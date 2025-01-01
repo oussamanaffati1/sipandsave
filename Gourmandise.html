@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres Exclusives</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"  rel="stylesheet"> 
+    <style>
+        .cart-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <div class="row">
+            <title>Barista's Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .subheading {
+            color: #9c5a26;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="subheading">Cosmitto Coffee</p>
+        <h1 class="heading">Bienvenue Cosmitto Coffee</h1>
+    </div>
+            <div class="col-md-8">
+                 
+                <p>
+                    Ici tout est fait pour vous permettre de vivre une expérience la plus inspirante possible.
+                    De notre café unique à notre espace iconique, l'inspiration est everywhere.
+                </p>
+                 
+                <p class="text-danger">Commandez en ligne est rapide et facile sur notre <a href="index.html" class="text-decoration-underline">boutique en ligne save&tip</a>.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="/img/gourmandise-logo-.jpg" width="300" height="200" alt="Carte Wash" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>3 articles</h3>
+            <!-- Add article cards or links here -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Offres Exclusives de Cartes d'abonnement Gourmandise</h1>
+        <div class="row g-4">
+            <!-- Offer 1 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Carte Silver</h5>
+                        <p class="card-text">Profitez de 10% de remise sur toutes vos boissons chaudes pendant un mois.</p>
+                        <p class="text-primary fw-bold">Prix : 20DT</p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Carte Silver" data-price="20">Ajouter au Panier</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Offer 2 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Carte Gold</h5>
+                        <p class="card-text">Bénéficiez de 15% de remise sur toutes vos boissons et un dessert offert chaque semaine.</p>
+                        <p class="text-primary fw-bold">Prix : 40DT</p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Carte Gold" data-price="40">Ajouter au Panier</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Offer 3 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Carte Platinum</h5>
+                        <p class="card-text">Accès illimité aux boissons chaudes avec des invitations à des événements exclusifs.</p>
+                        <p class="text-primary fw-bold">Prix : 60DT</p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Carte Platinum" data-price="60">Ajouter au Panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Shopping Cart Section -->
+        <div class="cart-container">
+            <h2>Panier</h2>
+            <div id="cart" class="card p-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <tr>
+                            <td colspan="3" class="text-center">Votre panier est vide.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-end">
+                    <strong>Total: <span id="cart-total">0</span> DT</strong>
+                </div>
+                <button id="checkout-btn" class="btn btn-success mt-3" disabled>Commander</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Cart Functionality
+        let cart = [];
+        const cartItemsEl = document.getElementById("cart-items");
+        const cartTotalEl = document.getElementById("cart-total");
+        const checkoutBtn = document.getElementById("checkout-btn");
+
+        // Add to Cart Functionality
+        document.querySelectorAll(".btn-add-to-cart").forEach(button => {
+            button.addEventListener("click", function () {
+                const name = this.dataset.name;
+                const price = parseFloat(this.dataset.price);
+
+                // Add item to cart
+                cart.push({ name, price });
+                updateCart();
+            });
+        });
+
+        // Update Cart Display
+        function updateCart() {
+            cartItemsEl.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartItemsEl.innerHTML = `
+                    <tr>
+                        <td colspan="3" class="text-center">Votre panier est vide.</td>
+                    </tr>`;
+                checkoutBtn.disabled = true;
+                cartTotalEl.textContent = "0";
+                return;
+            }
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                const row = `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.price.toFixed(2)} DT</td>
+                        <td><button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Supprimer</button></td>
+                    </tr>`;
+                cartItemsEl.innerHTML += row;
+            });
+
+            cartTotalEl.textContent = total.toFixed(2);
+            checkoutBtn.disabled = false;
+        }
+
+        // Remove from Cart
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        // Checkout Button Functionality
+        checkoutBtn.addEventListener("click", function () {
+            alert("Commande confirmée ! Merci pour votre achat.");
+            cart = [];
+            updateCart();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Ratings and Reviews -->
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5 class="card-title">Recommandé par 70 % (11842 avis)
+                    </h5>
+                    <h2 class="text-success">5,0 <span class="fs-6">&#9733;&#9733;&#9733;&#9733;&#9733;</span></h2>
+                    <p>1 avis</p>
+                    </p>Les Berges du Lac 2, Tunis, Tunisia</p>
+                    <p class="text-muted">Café restaurant moyen au service moyen. L'intérieur paraît même pas très clean ! Au fil du temps ce café restaurant se dégrade de plus en plus.</p>
+                    <button class="btn btn-dark">Écrire un avis</button>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5 class="card-title">Description</h5>
+                    <p><strong> </strong></p>
+                    <p> Café</p>
+                    <p><strong> </strong></p>
+                    <p>Gourmandise La Marsa n'a pas encore assez de notes sur ses plats, son service, son rapport qualité/prix ou son ambiance. Écrivez l'un des premiers avis !
+                    </p>
+                    <a href="#" class="text-primary">Voir tous les détails</a>
+                </div>
+            </div>
+
+            <!-- Location and Contact -->
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5 class="card-title">Emplacement et coordonnées</h5>
+                    <img alt="Map showing the location of the restaurant" class="SdiVi Zb" src="/img/gourmandise-la-marsa.jpg">
+                        <!-- Placeholder for map -->
+                    </div>
+                    <p class="mt-3">55 Avenue Habib Bourguiba, La Marsa 2070 Tunisie</p>
+                    <p>
+                        <a href="https://www.gourmandise.com.tn/" class="d-block">Site internet</a>
+                        <a href="https://www.gourmandise.com.tn/magasins" class="d-block"> Points de vente</a>
+                        <span class="d-block">+216 26 323 462   </span>
+                    </p>
+                    <a href="#" class="text-primary">Améliorer cette page établissement</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</body>
+</html> 

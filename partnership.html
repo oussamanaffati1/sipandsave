@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Sip&Save</title>
+        <link rel="stylesheet" href="contact.css">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+     
+          <!-- Navbar start -->
+      <div class="container-fluid nav-bar">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg py-4">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-primary fw-bold mb-0">Sip&<span class="text-dark">Save</span> </h1>
+                </a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="team.html" class="nav-item nav-link">our Team</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="event.html" class="nav-item nav-link">Events</a>
+                        <a href="partnership.html" class="nav-item nav-link">partnership</a>
+                    </div>
+                    <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                    <a href="Connexion.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill"> Connexion</a>
+                    <a href="Créer_un_compte.html" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Créer un compte
+                       
+                    </a>
+                </div>
+           
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    
+
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Hero Start -->
+        <div class="container-fluid bg-light py-6 my-6 mt-0">
+            <div class="container text-center animated bounceInDown">
+                <h1 class="display-1 mb-4"> Partnership</h1>
+                <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                   
+                  
+                </ol>
+            </div>
+        </div>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Partnership Form</title>
+            <!-- Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+            <!-- Custom CSS -->
+            <style>
+                /* Section de formulaire */
+                .form-container {
+                    max-width: 600px;
+                    margin: 50px auto;
+                    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+                    box-shadow: 10px 10px 20px #cbcbcb, -10px -10px 20px #ffffff;
+                    border-radius: 15px;
+                    padding: 30px;
+                }
+        
+                .form-container h1 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-size: 2rem;
+                    color: #007bff;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+                }
+        
+                .form-container input, 
+                .form-container select, 
+                .form-container textarea {
+                    border-radius: 10px;
+                    box-shadow: inset 4px 4px 8px #cbcbcb, inset -4px -4px 8px #ffffff;
+                    border: none;
+                    outline: none;
+                }
+        
+                .form-container button {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 1.2rem;
+                    border: none;
+                    border-radius: 10px;
+                    background: linear-gradient(145deg, #007bff, #0056b3);
+                    color: white;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                    box-shadow: 4px 4px 8px #0056b3, -4px -4px 8px #0099ff;
+                    transition: all 0.3s ease;
+                }
+        
+                .form-container button:hover {
+                    background: linear-gradient(145deg, #0056b3, #003f88);
+                    box-shadow: 2px 2px 5px #004d99, -2px -2px 5px #007bff;
+                    transform: translateY(-2px);
+                }
+            </style>
+        </head>
+        <body>
+            <form action="partnership.html" method="get">
+            <div class="container">
+                <div class="form-container">
+                    <h1>Become a Partner</h1>
+                    <form method="POST" action="process_partnership.php">
+                        <!-- Nom -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <!-- Entreprise -->
+                        <div class="mb-3">
+                            <label for="company" class="form-label">Company</label>
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Enter your company name">
+                        </div>
+                        <!-- Type de partenariat -->
+                        <div class="mb-3">
+                            <label for="partnership_type" class="form-label">Partnership Type</label>
+                            <select class="form-select" id="partnership_type" name="partnership_type" required>
+                                <option value="">Select a type</option>
+                                <option value="business">Business Partnership</option>
+                                <option value="technology">Technology Partnership</option>
+                                <option value="marketing">Marketing Collaboration</option>
+                            </select>
+                        </div>
+                        <!-- Message -->
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your proposal" required></textarea>
+                        </div>
+                        <!-- Bouton -->
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </form>
+        
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+        </html>
+        
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                </div>
+                <div class="col-md-6 my-auto text-center text-md-end text-white">
+                    <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                    <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                    <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                    Designed By   ranim & oussama 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
